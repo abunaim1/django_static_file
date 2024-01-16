@@ -14,7 +14,7 @@ def home(request):
             "userId": 1,
             "id": 2,
             "title": "qui est esse",
-            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciend2is\nqui aperiam non debitis possimus qui neque nisi nulla"
         },
         {
             "userId": 1,
@@ -36,3 +36,6 @@ def home(request):
         }
     ]
     return render(request,'home.html', {'data' : data})
+
+def about(request):
+    return render(request, 'home.html', {'id'  : request.GET})
